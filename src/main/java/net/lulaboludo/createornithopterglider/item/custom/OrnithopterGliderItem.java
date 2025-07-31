@@ -1,0 +1,74 @@
+package net.lulaboludo.createornithopterglider.item.custom;
+
+import net.lulaboludo.createornithopterglider.item.ModItems;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ElytraItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.NotNull;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
+
+import javax.annotation.Nonnull;
+
+public class OrnithopterGliderItem extends ElytraItem {
+
+    public OrnithopterGliderItem(Properties properties) {
+        super(properties);
+    }
+
+    @Override
+    public EquipmentSlot getEquipmentSlot(@NotNull ItemStack stack) {
+        return EquipmentSlot.CHEST;
+    }
+
+    @Override
+    public boolean isValidRepairItem(@Nonnull ItemStack toRepair, ItemStack repairCandidate) {
+        // Verifica se está reparando com a wing mesh correspondente
+        if (repairCandidate.getItem() instanceof Item) {
+            Item expectedWingMesh = getCorrespondingWingMesh(toRepair.getItem());
+            return repairCandidate.is(expectedWingMesh);
+        }
+        return false;
+    }
+
+    public ResourceLocation getEntityTexture(ItemStack stack) {
+        ResourceLocation id = BuiltInRegistries.ITEM.getKey(this);
+        return ResourceLocation.fromNamespaceAndPath("createornithopterglider", "textures/entity/" + id.getPath() + ".png");
+    }
+
+    public static boolean isFlying(Player player) {
+        if (player == null) return false;
+
+        if (!player.isFallFlying()) return false;
+
+        // Verifica peitoral
+        ItemStack chestStack = player.getItemBySlot(EquipmentSlot.CHEST);
+        if (chestStack.getItem() instanceof OrnithopterGliderItem) {
+            return true;
+        }
+
+        // Verifica curios
+        var maybeCurios = CuriosApi.getCuriosInventory(player);
+        if (maybeCurios.isPresent()) {
+            ICuriosItemHandler handler = maybeCurios.get();
+            return handler.isEquipped(stack -> stack.getItem() instanceof OrnithopterGliderItem);
+        }
+
+        return false;
+    }
+
+    private Item getCorrespondingWingMesh(Item glider) {
+        for (var entry : ModItems.ORNITHOPTER_ITEMS.entrySet()) {
+            if (entry.getValue().get() == glider) {
+                DyeColor color = entry.getKey();
+                return ModItems.WING_MESHES.get(color).get();
+            }
+        }
+        throw new IllegalArgumentException("Glider não corresponde a nenhuma wing mesh conhecida: " + glider);
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WPW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:lime_wool"
+    },
+    "P": {
+      "item": "createornithopterglider:elytra_piece"
+    }
+  },
+  "result": {
+    "item": "createornithopterglider:wing_mesh_lime",
+    "count": 2
+  }
+}

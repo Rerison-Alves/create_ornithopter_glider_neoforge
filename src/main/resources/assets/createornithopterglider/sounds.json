@@ -1,0 +1,8 @@
+{
+  "wing_flapping": {
+    "subtitles": "sounds.createornithopterglider.wing_flapping",
+    "sounds": [
+      "createornithopterglider:wing_flapping"
+    ]
+  }
+}
