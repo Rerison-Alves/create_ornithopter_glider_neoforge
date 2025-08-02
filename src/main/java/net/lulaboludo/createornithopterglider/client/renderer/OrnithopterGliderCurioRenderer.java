@@ -45,12 +45,12 @@ public class OrnithopterGliderCurioRenderer implements ICurioRenderer {
             poseStack.pushPose();
             poseStack.translate(0.0D, 0.0D, 0.125D);
 
-            ResourceLocation texture = gliderItem.getEntityTexture(stack);
+            ResourceLocation texture = gliderItem.getEntityTexture();
 
-            VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.armorCutoutNoCull(texture));
+            VertexConsumer vertexConsumer = buffer.getBuffer(RenderType.entityCutoutNoCull(texture));
 
             this.model.setupAnim(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch);
-            this.model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 1);
+            this.model.renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY, 0xFFFFFFFF);
 
             poseStack.popPose();
         }
