@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    "WPW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "P": {
+      "item": "createornithopterglider:elytra_piece"
+    }
+  },
+  "result": {
+    "id": "createornithopterglider:wing_mesh_light_blue",
+    "count": 2
+  }
+}

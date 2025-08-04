@@ -1,0 +1,23 @@
+{
+  "type": "create:crushing",
+  "group": "minecraft:misc",
+  "ingredients": [
+    {
+      "item": "minecraft:elytra"
+    }
+  ],
+  "results": [
+    {
+      "id": "createornithopterglider:elytra_piece"
+    },
+    {
+      "id": "createornithopterglider:elytra_piece",
+      "chance": 0.75
+    },
+    {
+      "id": "minecraft:phantom_membrane",
+      "chance": 0.25
+    }
+  ],
+  "processingTime": 200
+}

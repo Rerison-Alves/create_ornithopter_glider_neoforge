@@ -1,0 +1,38 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "  PSP  ",
+    "WWLCLWW",
+    " WECEW ",
+    "  SRS  ",
+    "   W   "
+  ],
+  "key": {
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "P": {
+      "item": "create:brass_nugget"
+    },
+    "W": {
+      "item": "createornithopterglider:wing_mesh_orange"
+    },
+    "L": {
+      "tag": "createornithopterglider:ropes"
+    },
+    "C": {
+      "item": "create:cogwheel"
+    },
+    "E": {
+      "item": "create:shaft"
+    },
+    "R": {
+      "item": "create:andesite_casing"
+    }
+  },
+  "result": {
+    "id": "createornithopterglider:ornithopterglider_orange",
+    "count": 1
+  },
+  "accept_mirrored": false
+}

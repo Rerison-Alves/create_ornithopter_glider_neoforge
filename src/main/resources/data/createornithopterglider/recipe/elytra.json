@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "createornithopterglider:elytra_piece"
+    },
+    {
+      "item": "createornithopterglider:elytra_piece"
+    }
+  ],
+  "result": {
+    "id": "minecraft:elytra",
+    "count": 1
+  }
+}

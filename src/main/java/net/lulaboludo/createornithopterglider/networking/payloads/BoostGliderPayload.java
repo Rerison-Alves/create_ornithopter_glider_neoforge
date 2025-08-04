@@ -38,8 +38,6 @@ public record BoostGliderPayload(int force) implements CustomPacketPayload {
             float strength = Math.min(data.force(), 40) / 40f;
             float boostPower = 0.2f + strength * 1.8f;
 
-            var look = player.getLookAngle();
-
             // Delay de 400ms antes de aplicar o movimento
             requireNonNull(player.level().getServer()).execute(() -> {
                 try {
@@ -47,6 +45,7 @@ public record BoostGliderPayload(int force) implements CustomPacketPayload {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
+                var look = player.getLookAngle();
                 player.addDeltaMovement(new Vec3(
                         look.x * boostPower,
                         look.y * boostPower + 0.2,

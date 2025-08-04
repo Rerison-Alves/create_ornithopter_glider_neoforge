@@ -23,14 +23,14 @@ public class CreateOrnithopterGlider {
     public CreateOrnithopterGlider(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
+        NeoForge.EVENT_BUS.register(this);
+
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModSounds.register(modEventBus);
 
-        NeoForge.EVENT_BUS.register(this);
-
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        // modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
