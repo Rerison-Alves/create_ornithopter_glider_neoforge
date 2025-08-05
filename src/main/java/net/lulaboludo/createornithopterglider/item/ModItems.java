@@ -2,11 +2,9 @@ package net.lulaboludo.createornithopterglider.item;
 
 import net.lulaboludo.createornithopterglider.CreateOrnithopterGlider;
 import net.lulaboludo.createornithopterglider.item.custom.OrnithopterGliderItem;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;

@@ -38,13 +38,8 @@ public record BoostGliderPayload(int force) implements CustomPacketPayload {
             float strength = Math.min(data.force(), 40) / 40f;
             float boostPower = 0.2f + strength * 1.8f;
 
-            // Delay de 400ms antes de aplicar o movimento
-            requireNonNull(player.level().getServer()).execute(() -> {
-                try {
-                    Thread.sleep(400);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+            try {
+                Thread.sleep(400);
                 var look = player.getLookAngle();
                 player.addDeltaMovement(new Vec3(
                         look.x * boostPower,
@@ -52,7 +47,9 @@ public record BoostGliderPayload(int force) implements CustomPacketPayload {
                         look.z * boostPower
                 ));
                 player.hurtMarked = true;
-            });
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         });
     }
 }

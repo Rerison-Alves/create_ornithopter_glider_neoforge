@@ -14,7 +14,10 @@ public class OrnithoptergGliderAnimation {
 					new Keyframe(0.0F, degreeVec(-90.0F, 0.0F, 0.0F), LINEAR)
 			))
 			.addAnimation("all", new AnimationChannel(POSITION,
-					new Keyframe(0.0F, posVec(0.0F, 13.0F, -11.0F), LINEAR)
+					new Keyframe(0.0F, posVec(0.0F, 15.0F, -8.0F), LINEAR)
+			))
+			.addAnimation("all", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.8F, 0.8F, 0.8F), LINEAR)
 			))
 			.addAnimation("spine", new AnimationChannel(ROTATION,
 					new Keyframe(0.0F, degreeVec(10.0F, 0.0F, 0.0F), LINEAR)
@@ -132,7 +135,10 @@ public class OrnithoptergGliderAnimation {
 					new Keyframe(0.0F, degreeVec(-65.0F, 0.0F, 0.0F), LINEAR)
 			))
 			.addAnimation("all", new AnimationChannel(POSITION,
-					new Keyframe(0.0F, posVec(0.0F, 6.0F, -5.0F), LINEAR)
+					new Keyframe(0.0F, posVec(0.0F, 10.0F, -3.5F), LINEAR)
+			))
+			.addAnimation("all", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.8F, 0.8F, 0.8F), LINEAR)
 			))
 			.addAnimation("spine", new AnimationChannel(ROTATION,
 					new Keyframe(0.0F, degreeVec(10.0F, 0.0F, 0.0F), LINEAR)

@@ -1,6 +1,5 @@
 package net.lulaboludo.createornithopterglider.item.custom;
 
-import com.illusivesoulworks.caelus.api.CaelusApi;
 import net.lulaboludo.createornithopterglider.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -30,10 +29,6 @@ public class OrnithopterGliderItem extends ElytraItem implements ICurioItem {
     @Override
     public void curioTick(SlotContext slotContext, ItemStack stack) {
         LivingEntity livingEntity = slotContext.entity();
-        var attribute = livingEntity.getAttribute(CaelusApi.getInstance().getFallFlyingAttribute());
-        if (attribute != null) {
-            attribute.setBaseValue(1.0D);
-        }
         int ticks = livingEntity.getFallFlyingTicks();
         if (ticks > 0 && livingEntity.isFallFlying()) {
             stack.elytraFlightTick(livingEntity, ticks);
