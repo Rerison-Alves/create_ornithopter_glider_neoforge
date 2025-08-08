@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "createornithopterglider:wing_mesh",
+    "createornithopterglider:wing_mesh_light_gray",
+    "createornithopterglider:wing_mesh_gray",
+    "createornithopterglider:wing_mesh_black",
+    "createornithopterglider:wing_mesh_brown",
+    "createornithopterglider:wing_mesh_red",
+    "createornithopterglider:wing_mesh_orange",
+    "createornithopterglider:wing_mesh_yellow",
+    "createornithopterglider:wing_mesh_lime",
+    "createornithopterglider:wing_mesh_green",
+    "createornithopterglider:wing_mesh_cyan",
+    "createornithopterglider:wing_mesh_light_blue",
+    "createornithopterglider:wing_mesh_blue",
+    "createornithopterglider:wing_mesh_purple",
+    "createornithopterglider:wing_mesh_magenta",
+    "createornithopterglider:wing_mesh_pink"
+  ]
+}
