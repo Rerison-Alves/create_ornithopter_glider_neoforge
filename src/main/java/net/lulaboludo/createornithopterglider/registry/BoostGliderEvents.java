@@ -99,7 +99,8 @@ public class BoostGliderEvents {
     @SubscribeEvent
     public static void onOverlayPre(RenderGuiLayerEvent.Pre event) {
         Player player = Minecraft.getInstance().player;
-        if (event.getName().equals(VanillaGuiLayers.EXPERIENCE_BAR)
+        if ((event.getName().equals(VanillaGuiLayers.EXPERIENCE_BAR)
+                || event.getName().equals(VanillaGuiLayers.EXPERIENCE_LEVEL))
                 && OrnithopterGliderItem.isFlying(player)) {
             event.setCanceled(true);
         }
@@ -115,7 +116,7 @@ public class BoostGliderEvents {
                     var mc = Minecraft.getInstance();
                     int screenWidth = guiGraphics.guiWidth();
                     int screenHeight = guiGraphics.guiHeight();
-                    if (!OrnithopterGliderItem.isFlying(mc.player)) return;
+                    if (!OrnithopterGliderItem.isFlying(mc.player) || mc.options.hideGui) return;
 
                     int x = (screenWidth - BG_WIDTH) / 2;
                     int y = screenHeight - 42;
