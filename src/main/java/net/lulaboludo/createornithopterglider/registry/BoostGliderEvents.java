@@ -1,6 +1,7 @@
 package net.lulaboludo.createornithopterglider.registry;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.lulaboludo.createornithopterglider.Config;
 import net.lulaboludo.createornithopterglider.client.animations.FlapAnimationManager;
 import net.lulaboludo.createornithopterglider.item.custom.OrnithopterGliderItem;
 import net.lulaboludo.createornithopterglider.networking.payloads.BoostGliderPayload;
@@ -35,7 +36,6 @@ public class BoostGliderEvents {
     public static final int DECAY_TIME = 2;
     public static final int DECAY_PIXELS = 30;
 
-    public static final int COOLDOWN_TICKS = 2 * 20; // 2 Segundos
     public static int cooldownTicks = 0;
     public static int cooldownDisplayDelay = 0;
 
@@ -92,7 +92,7 @@ public class BoostGliderEvents {
             level.playSound(mc.player, mc.player.getX(), mc.player.getY(), mc.player.getZ(),
                     ModSounds.WING_FLAPPING.get(), SoundSource.PLAYERS, 10f, 1f);
             charging = false;
-            cooldownTicks = COOLDOWN_TICKS;
+            cooldownTicks = Config.COOLDOWN_TICKS.getAsInt();;
         }
     }
 
