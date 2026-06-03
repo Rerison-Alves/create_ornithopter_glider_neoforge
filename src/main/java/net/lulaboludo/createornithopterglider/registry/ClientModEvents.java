@@ -1,20 +1,18 @@
 package net.lulaboludo.createornithopterglider.registry;
 
 import net.lulaboludo.createornithopterglider.client.model.OrnithopterGliderModel;
-import net.lulaboludo.createornithopterglider.client.renderer.OrnithopterGliderCurioRenderer;
 import net.lulaboludo.createornithopterglider.client.renderer.OrnithopterGliderLayer;
-import net.lulaboludo.createornithopterglider.item.ModItems;
+import net.lulaboludo.createornithopterglider.integration.curios.CuriosCompat;
 import net.lulaboludo.createornithopterglider.util.KeyBinding;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
 import net.minecraft.client.resources.PlayerSkin.Model;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
-import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 import java.util.List;
 
@@ -46,14 +44,10 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            ModItems.ORNITHOPTER_ITEMS.forEach((color, item) -> {
-                CuriosRendererRegistry.register(
-                        item.get(),
-                        () -> new OrnithopterGliderCurioRenderer(Minecraft.getInstance().getEntityModels())
-                );
-            });
+            if (ModList.get().isLoaded("curios")) {
+                CuriosCompat.getInstance().registerRenderers();
+            }
         });
-
     }
 
     @SubscribeEvent

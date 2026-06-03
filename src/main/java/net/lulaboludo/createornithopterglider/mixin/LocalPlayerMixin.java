@@ -1,6 +1,6 @@
 package net.lulaboludo.createornithopterglider.mixin;
 
-import net.lulaboludo.createornithopterglider.util.HasOrnithopterInCurios;
+import net.lulaboludo.createornithopterglider.integration.curios.CuriosCompat;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +21,7 @@ public class LocalPlayerMixin {
     )
     private boolean createornithopter$canElytraFly(ItemStack stack, LivingEntity entity) {
         if (entity instanceof Player player) {
-            if (HasOrnithopterInCurios.verify(player)) {
+            if (CuriosCompat.getInstance().hasOrnithopter(player)) {
                 return true;
             }
         }

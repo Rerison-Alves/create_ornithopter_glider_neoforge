@@ -1,6 +1,6 @@
 package net.lulaboludo.createornithopterglider.mixin;
 
-import net.lulaboludo.createornithopterglider.util.HasOrnithopterInCurios;
+import net.lulaboludo.createornithopterglider.integration.curios.CuriosCompat;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,7 +20,7 @@ public class PlayerMixin {
 
         Player player = (Player)(Object)this;
 
-        if (!HasOrnithopterInCurios.verify(player)) {
+        if (!CuriosCompat.getInstance().hasOrnithopter(player)) {
             return;
         }
 
