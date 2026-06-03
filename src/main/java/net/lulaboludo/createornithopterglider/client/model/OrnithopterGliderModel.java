@@ -208,6 +208,8 @@ public class OrnithopterGliderModel<T extends Entity> extends HierarchicalModel<
 					return current;
 				return OG_GLIDING;
 			}
+			if (player.isCrouching())
+				return OG_DEFAULT_SHIFITING;
 		}
 		return OG_DEFAULT;
 	}

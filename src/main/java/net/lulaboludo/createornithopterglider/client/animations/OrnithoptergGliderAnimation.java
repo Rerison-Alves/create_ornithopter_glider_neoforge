@@ -130,6 +130,127 @@ public class OrnithoptergGliderAnimation {
 			))
 			.build();
 
+	public static final AnimationDefinition OG_DEFAULT_SHIFITING = AnimationDefinition.Builder.withLength(11.0F).looping()
+			.addAnimation("all", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(-90.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("all", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 15.0F, -8.0F), LINEAR)
+			))
+			.addAnimation("all", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.8F, 0.8F, 0.8F), LINEAR)
+			))
+			.addAnimation("spine", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(10.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("spine", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 1.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("rope1", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("rope2", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("leftwing", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(0.0F, -45.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("leftwing", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(3.0F, -4.7F, 4.0F), LINEAR)
+			))
+			.addAnimation("leftwing", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.25F, 0.25F, 0.25F), LINEAR)
+			))
+			.addAnimation("rightwing", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(0.0F, 45.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("rightwing", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(-3.0F, -4.7F, 4.0F), LINEAR)
+			))
+			.addAnimation("rightwing", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.25F, 0.25F, 0.25F), LINEAR)
+			))
+			.addAnimation("backwing", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(-15.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("backwing", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 1.0F, -6.0F), LINEAR)
+			))
+			.addAnimation("backwing", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.4F, 0.4F, 0.4F), LINEAR)
+			))
+			.addAnimation("column2", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(90.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("column2", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 23.7F, -15.6F), LINEAR)
+			))
+			.addAnimation("column2", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(1.0F, 1.0F, 1.0F), LINEAR)
+			))
+			.addAnimation("support", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 12.0F, -8.6F), LINEAR)
+			))
+			.addAnimation("support", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.45F, 0.45F, 0.45F), LINEAR)
+			))
+			.addAnimation("column1", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(90.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("column1", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 1.8F, 2.0F), LINEAR)
+			))
+			.addAnimation("column1", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.8F, 0.8F, 0.8F), LINEAR)
+			))
+			.addAnimation("uperspine", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(-10.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("uperspine", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, -3.2F, 5.7F), LINEAR)
+			))
+			.addAnimation("uperspine", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.7F, 0.7F, 0.7F), LINEAR)
+			))
+			.addAnimation("gear", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, -0.6F, 0.0F), LINEAR)
+			))
+			.addAnimation("gear", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.3F, 0.6F, 0.3F), LINEAR)
+			))
+			.addAnimation("rope3", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("rope4", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("axis", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 1.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("axis", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(1.0F, 0.6F, 1.0F), LINEAR)
+			))
+			.addAnimation("gear2", new AnimationChannel(ROTATION,
+					new Keyframe(0.0F, degreeVec(0.0F, 0.0F, 0.0F), LINEAR),
+					new Keyframe(11.0F, degreeVec(0.0F, 360.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("gear2", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.5F, 0.6F, 0.5F), LINEAR)
+			))
+			.addAnimation("backspine", new AnimationChannel(POSITION,
+					new Keyframe(0.0F, posVec(0.0F, 2.0F, -9.0F), LINEAR)
+			))
+			.addAnimation("backspine", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.8F, 0.8F, 0.8F), LINEAR)
+			))
+			.addAnimation("leftwingsup", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.addAnimation("rightwingsup", new AnimationChannel(SCALE,
+					new Keyframe(0.0F, scaleVec(0.0F, 0.0F, 0.0F), LINEAR)
+			))
+			.build();
+
 	public static final AnimationDefinition OG_GLIDING = AnimationDefinition.Builder.withLength(11.0F).looping()
 			.addAnimation("all", new AnimationChannel(ROTATION,
 					new Keyframe(0.0F, degreeVec(-90.0F, 0.0F, 0.0F), LINEAR)
