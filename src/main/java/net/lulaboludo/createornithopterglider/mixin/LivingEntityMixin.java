@@ -41,9 +41,7 @@ public class LivingEntityMixin {
             ItemStack ornithopter = CuriosCompat.getInstance().getOrnithopter(player);
 
             if (!ornithopter.isEmpty()) {
-                if (ornithopter.isDamageableItem() && player.tickCount % 20 == 0) {
-                    ornithopter.hurtAndBreak(1, player, EquipmentSlot.CHEST);
-                }
+                ornithopter.elytraFlightTick(player, player.tickCount);
                 return true;
             }
         }
