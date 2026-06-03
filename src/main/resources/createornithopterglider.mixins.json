@@ -5,6 +5,7 @@
   "mixins": [
     "LivingEntityMixin",
     "LocalPlayerMixin",
-    "PlayerMixin"
+    "PlayerMixin",
+    "CapeLayerMixin"
   ]
 }

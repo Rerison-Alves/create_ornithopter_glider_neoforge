@@ -25,12 +25,8 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void addLayers(EntityRenderersEvent.AddLayers event) {
-        for (String skin : List.of("default", "slim")) {
-            PlayerRenderer renderer = event.getSkin(Model.byName(skin));
-            if (renderer != null) {
-                renderer.addLayer(new OrnithopterGliderLayer<>(renderer, event.getEntityModels()));
-            }
-        }
+        LayerRegister.registerPlayerLayers(event);
+        LayerRegister.registerArmorStandLayer(event);
     }
 
     @SubscribeEvent
