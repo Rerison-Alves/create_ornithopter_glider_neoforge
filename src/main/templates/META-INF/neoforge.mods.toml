@@ -10,6 +10,8 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/create-ornithopter-glid
 logoFile="icon.png"
 authors="${mod_authors}"
 description='''${mod_description}'''
+[[mixins]]
+config="${mod_id}.mixins.json"
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
@@ -34,14 +36,7 @@ side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="curios"
-type="required"
+type="optional"
 versionRange="[9.3.1,)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="caelus"
-type="required"
-versionRange="[7.0.1,)"
 ordering="AFTER"
 side="BOTH"

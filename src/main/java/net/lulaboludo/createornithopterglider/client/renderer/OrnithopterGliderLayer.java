@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.lulaboludo.createornithopterglider.client.model.OrnithopterGliderModel;
 import net.lulaboludo.createornithopterglider.item.custom.OrnithopterGliderItem;
 import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -35,6 +36,8 @@ public class OrnithopterGliderLayer<T extends LivingEntity, M extends EntityMode
 
         if (!entity.isInvisible() && stack.getItem() instanceof OrnithopterGliderItem gliderItem) {
             poseStack.pushPose();
+
+            ((HumanoidModel<?>) this.getParentModel()).body.translateAndRotate(poseStack);
 
             poseStack.translate(0.0D, 0.0D, 0.125D);
 

@@ -5,6 +5,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.lulaboludo.createornithopterglider.client.model.OrnithopterGliderModel;
 import net.lulaboludo.createornithopterglider.item.custom.OrnithopterGliderItem;
 import net.minecraft.client.model.EntityModel;
+import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -43,6 +44,9 @@ public class OrnithopterGliderCurioRenderer implements ICurioRenderer {
 
         if (!entity.isInvisible() && stack.getItem() instanceof OrnithopterGliderItem gliderItem) {
             poseStack.pushPose();
+
+            ((HumanoidModel<?>) renderLayerParent.getModel()).body.translateAndRotate(poseStack);
+
             poseStack.translate(0.0D, 0.0D, 0.125D);
 
             ResourceLocation texture = gliderItem.getEntityTexture();

@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.lulaboludo.createornithopterglider.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingEntityMixin",
+    "LocalPlayerMixin",
+    "PlayerMixin",
+    "CapeLayerMixin"
+  ]
+}

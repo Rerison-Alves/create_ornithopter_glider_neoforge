@@ -132,10 +132,10 @@ public class OrnithoptergGliderAnimation {
 
 	public static final AnimationDefinition OG_DEFAULT_SHIFITING = AnimationDefinition.Builder.withLength(11.0F).looping()
 			.addAnimation("all", new AnimationChannel(ROTATION,
-					new Keyframe(0.0F, degreeVec(-65.0F, 0.0F, 0.0F), LINEAR)
+					new Keyframe(0.0F, degreeVec(-90.0F, 0.0F, 0.0F), LINEAR)
 			))
 			.addAnimation("all", new AnimationChannel(POSITION,
-					new Keyframe(0.0F, posVec(0.0F, 10.0F, -3.5F), LINEAR)
+					new Keyframe(0.0F, posVec(0.0F, 15.0F, -8.0F), LINEAR)
 			))
 			.addAnimation("all", new AnimationChannel(SCALE,
 					new Keyframe(0.0F, scaleVec(0.8F, 0.8F, 0.8F), LINEAR)

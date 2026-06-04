@@ -3,6 +3,7 @@ package net.lulaboludo.createornithopterglider;
 import net.lulaboludo.createornithopterglider.item.ModCreativeModTabs;
 import net.lulaboludo.createornithopterglider.item.ModItems;
 import net.lulaboludo.createornithopterglider.sounds.ModSounds;
+import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -22,6 +23,8 @@ public class CreateOrnithopterGlider {
 
     public CreateOrnithopterGlider(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         NeoForge.EVENT_BUS.register(this);
 
