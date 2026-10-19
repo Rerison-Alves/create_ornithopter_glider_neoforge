@@ -8,7 +8,7 @@
   ],
   "key": {
     "W": {
-      "item": "minecraft:white_wool"
+      "item": "create:white_sail"
     },
     "P": {
       "item": "createornithopterglider:elytra_piece"
@@ -16,6 +16,6 @@
   },
   "result": {
     "id": "createornithopterglider:wing_mesh",
-    "count": 2
+    "count": 3
   }
 }

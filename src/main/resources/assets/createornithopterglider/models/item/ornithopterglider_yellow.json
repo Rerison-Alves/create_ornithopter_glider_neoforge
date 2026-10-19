@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "createornithopterglider:item/ornithopterglider_yellow"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.997685
+      },
+      "model": "createornithopterglider:item/ornithopterglider_damaged"
+    }
+  ]
 }

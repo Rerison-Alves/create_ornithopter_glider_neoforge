@@ -1,16 +1,24 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "ingredients": [
-    {
+  "pattern": [
+    "   ",
+    "EDE",
+    "   "
+  ],
+  "key": {
+    "E": {
       "item": "createornithopterglider:elytra_piece"
     },
-    {
-      "item": "createornithopterglider:elytra_piece"
+    "D": {
+      "item": "minecraft:dragon_breath"
     }
-  ],
+  },
   "result": {
     "id": "minecraft:elytra",
-    "count": 1
+    "count": 1,
+    "components": {
+      "minecraft:damage": 431
+    }
   }
 }
