@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " F ",
+    "FCF",
+    " F "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:popped_chorus_fruit"
+    },
+    "F": {
+      "item": "minecraft:phantom_membrane"
+    }
+  },
+  "result": {
+    "id": "createornithopterglider:elytra_piece",
+    "count": 1
+  }
+}
